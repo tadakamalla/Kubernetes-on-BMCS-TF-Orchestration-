@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mynode
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: mynode
+    spec:
+      containers:
+      - name: mynode
+        image: tadakamalla/mynode 
+        ports:
+        - containerPort: 8085

@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: geoff-wls
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: geoff-wls
+    spec:
+      containers:
+      - name: geoff-wls
+        image: workingman/geoff-wls
+        ports:
+        - containerPort: 7001
+
