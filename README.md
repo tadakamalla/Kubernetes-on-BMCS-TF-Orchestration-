@@ -29,3 +29,5 @@ Note that Terraform generates a terraform.tfstate and terraform.tfstate.backup f
 
 If you want to tear down your environment, you can do that by running terraform destroy
 # Kubernetes-on-BMCS-TF-Orchestration-
+  Architecture Diagram
+  
