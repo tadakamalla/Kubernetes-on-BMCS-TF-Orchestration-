@@ -1,5 +1,6 @@
 # Kubernetes-on-BMCS-TF-Orchestration-
-
+# Architecture Diagram
+ ![alt text](https://github.com/tadakamalla/Kubernetes-on-BMCS-TF-Orchestration-/blob/master/architecture.png)
 # Software Requirements
 
 To run this you must have installed the Terraform binary (at least 0.9.x) and configured it per instruction.
@@ -28,6 +29,4 @@ If you are satisfied, you can build the configuration by typing terraform apply.
 Note that Terraform generates a terraform.tfstate and terraform.tfstate.backup file which manage the state of your environment. These files should not be hand edited.
 
 If you want to tear down your environment, you can do that by running terraform destroy
-# Kubernetes-on-BMCS-TF-Orchestration-
-  Architecture Diagram
- ![alt text](https://github.com/tadakamalla/Kubernetes-on-BMCS-TF-Orchestration-/blob/master/architecture.png)
+
