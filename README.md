@@ -1,4 +1,4 @@
-# Kubernetes-on-Oracle BMCS-TF-Orchestration-
+# Kubernetes on Oracle BMCS
 # Architecture Diagram
  ![alt text](https://github.com/tadakamalla/Kubernetes-on-BMCS-TF-Orchestration-/blob/master/architecture.png)
 # Software Requirements
