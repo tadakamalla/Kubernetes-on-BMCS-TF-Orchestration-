@@ -19,6 +19,8 @@ module "kubernetes-master" {
   compartment_ocid = "${var.compartment_ocid}"
   ssh_public_key = "${file(var.ssh_public_key_path)}"  
   instance_name = "kube-master"
+  InstanceOS = "${var.InstanceOS}"
+  InstanceOSVersion = "${var.InstanceOSVersion}"
 }
 
 module "kubernetes-minion1" {
@@ -29,6 +31,8 @@ module "kubernetes-minion1" {
   compartment_ocid = "${var.compartment_ocid}"
   ssh_public_key = "${file(var.ssh_public_key_path)}"  
   instance_name = "kube-minion1"
+  InstanceOS = "${var.InstanceOS}"
+  InstanceOSVersion = "${var.InstanceOSVersion}"
 }
 module "kubernetes-minion2" {
   AD="3"
@@ -38,6 +42,8 @@ module "kubernetes-minion2" {
   compartment_ocid = "${var.compartment_ocid}"
   ssh_public_key = "${file(var.ssh_public_key_path)}"  
   instance_name = "kube-minion2"
+  InstanceOS = "${var.InstanceOS}"
+  InstanceOSVersion = "${var.InstanceOSVersion}"
 }
 
 
@@ -48,6 +54,7 @@ module "kubernetes-config" {
     master-public-ip = "${module.kubernetes-master.public_ip}"
     slave-1-public-ip = "${module.kubernetes-minion1.public_ip}"
     slave-2-public-ip = "${module.kubernetes-minion2.public_ip}"
+    ssh_private_key_path = "${var.ssh_private_key_path}"
 }
 
 module "kubelb-config" {

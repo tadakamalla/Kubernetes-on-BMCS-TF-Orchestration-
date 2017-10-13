@@ -1,5 +1,5 @@
 provider "baremetal"{
-region="us-ashburn-1"
+region="us-phoenix-1"
 }
 resource "baremetal_load_balancer" "kubelb" {
   shape          = "100Mbps"

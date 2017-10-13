@@ -13,3 +13,14 @@ instance_id = "${baremetal_core_instance.compute_instance.id}"
 data "baremetal_core_vnic" "InstanceVnic" { 
 vnic_id = "${lookup(data.baremetal_core_vnic_attachments.InstanceVnics.vnic_attachments[0],"vnic_id")}" 
 }
+
+#output a map of image names mapped to OCID
+
+
+#OCID of the OS image to use
+data "baremetal_core_images" "OLImageOCID" {
+    compartment_id = "${var.compartment_ocid}"
+    operating_system = "${var.InstanceOS}"
+    operating_system_version = "${var.InstanceOSVersion}"
+}
+
