@@ -1,5 +1,5 @@
 provider "baremetal"{
-region="us-phoenix-1"
+region="${var.region}"
 }
 variable "VPC-CIDR" {
   default = "10.0.0.0/16"

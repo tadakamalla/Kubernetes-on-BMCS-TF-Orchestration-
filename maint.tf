@@ -10,6 +10,7 @@ module "vcn" {
   source = "./modules/vcn"
   tenancy_ocid = "${var.tenancy_ocid}"
   compartment_ocid = "${var.compartment_ocid}"
+  region = "${var.region}"
 }
 module "kubernetes-master" {
   AD="1"
@@ -21,6 +22,7 @@ module "kubernetes-master" {
   instance_name = "kube-master"
   InstanceOS = "${var.InstanceOS}"
   InstanceOSVersion = "${var.InstanceOSVersion}"
+  region = "${var.region}"
 }
 
 module "kubernetes-minion1" {
@@ -33,6 +35,7 @@ module "kubernetes-minion1" {
   instance_name = "kube-minion1"
   InstanceOS = "${var.InstanceOS}"
   InstanceOSVersion = "${var.InstanceOSVersion}"
+  region = "${var.region}"
 }
 module "kubernetes-minion2" {
   AD="3"
@@ -44,6 +47,7 @@ module "kubernetes-minion2" {
   instance_name = "kube-minion2"
   InstanceOS = "${var.InstanceOS}"
   InstanceOSVersion = "${var.InstanceOSVersion}"
+  region = "${var.region}"
 }
 
 
@@ -65,6 +69,7 @@ module "kubelb-config" {
     slave-2-private-ip = "${module.kubernetes-minion2.private_ip}"
     slave-1-subnet2-ocid = "${module.vcn.subnet2_ocid}"
     slave-2-subnet3-ocid = "${module.vcn.subnet3_ocid}"
+    region = "${var.region}"
 }
 
 

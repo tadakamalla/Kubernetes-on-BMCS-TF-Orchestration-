@@ -9,5 +9,5 @@ variable "AD" {
     default = "1"
 }
 variable "InstanceOS" {}
-
+variable "region" {}
 variable "InstanceOSVersion" {}

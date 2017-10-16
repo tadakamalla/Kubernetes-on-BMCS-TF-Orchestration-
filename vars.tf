@@ -7,9 +7,10 @@ variable "compartment_ocid" {}
 variable "ssh_public_key_path" {default="userdata/ssh_authorized_keys.pub"}
 variable "ssh_private_key_path" {default="userdata/ssh_authorized_keys.pem"}
 variable "InstanceOS" {
-    default = "Oracle Linux"
+    default = "CentOS"
 }
 
 variable "InstanceOSVersion" {
-    default = "7.3"
+    default = "7"
 }
+variable "region" {}

@@ -1,5 +1,5 @@
 provider "baremetal"{
-region="us-phoenix-1"
+region="${var.region}"
 }
 resource "baremetal_core_instance" "compute_instance" {
   availability_domain="${lookup(data.baremetal_identity_availability_domains.ADs.availability_domains[var.AD - 1],"name")}"
